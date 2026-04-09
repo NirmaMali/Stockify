@@ -8,7 +8,7 @@ function Footer() {
           <div className="col">
             <img src="media/images/logo.svg" style={{ width: "50%" }} />
             <p>
-              &copy; 2010 - 2024, Not Zerodha Broking Ltd. All rights reserved.
+              &copy; 2010 - 2026, Not Zerodha Broking Ltd. All rights reserved.
             </p>
           </div>
           <div className="col">
@@ -100,6 +100,18 @@ function Footer() {
           </p>
         </div>
       </div>
+      <div
+  className="container mt-5 mb-5 text-muted d-flex gap-4 flex-wrap"
+  style={{ fontSize: "14px" }}
+>
+  <a href="#" className="text-muted text-decoration-none">NSE</a>
+  <a href="#" className="text-muted text-decoration-none">BSE</a>
+  <a href="#" className="text-muted text-decoration-none">MCX</a>
+  <a href="#" className="text-muted text-decoration-none">Terms & Conditions</a>
+  <a href="#" className="text-muted text-decoration-none">Policies & Procedures</a>
+  <a href="#" className="text-muted text-decoration-none">Privacy Policy</a>
+  <a href="#" className="text-muted text-decoration-none">Risk Disclosure</a>
+</div>
     </footer>
   );
 }

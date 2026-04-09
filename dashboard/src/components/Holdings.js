@@ -5,7 +5,7 @@ import { holdings } from "../data/data";
 const Holdings = () => {
   return (
     <>
-      <h3 className="title">Holdings (13)</h3>
+
       <h3 className="title">Holdings ({holdings.length})</h3>
 
       <div className="order-table">
@@ -28,7 +28,7 @@ const Holdings = () => {
             const dayClass = stock.isLoss ? "loss" : "profit";
 
             return (
-              <tr key={index}>
+              <tr key={index} >
                 <td>{stock.name}</td>
                 <td>{stock.qty}</td>
                 <td>{stock.avg.toFixed(2)}</td>

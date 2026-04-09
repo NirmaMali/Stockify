@@ -5,7 +5,6 @@ import { positions } from "../data/data";
 const Positions = () => {
   return (
     <>
-      <h3 className="title">Positions (2)</h3>
       <h3 className="title">Positions ({positions.length})</h3>
 
       <div className="order-table">

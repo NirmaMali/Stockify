@@ -1,10 +1,17 @@
-
-
+require('dotenv').config();
 
 const express = require('express');
+const mongoose = require('mongoose');
+
+
+const PORT = process.env.PORT || 3001;
+const uri = process.env.MONGO_URI;
+
 
 const app= express();
 
-app.listen(3001, () =>{
+app.listen(PORT, () =>{
     console.log("App Started");
+    mongoose.connect(uri);
+    console.log("DB connected");
 })

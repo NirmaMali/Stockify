@@ -137,7 +137,7 @@ app.use(bodyParser.json());
 //       qty: item.qty,
 //       avg: item.avg,
 //       price: item.price,
-//       net: item.net,
+//       net: item.day,
 //       day: item.day,
 //     });
 
@@ -186,6 +186,29 @@ app.use(bodyParser.json());
 //   });
 //   res.send("Done!");
 // });
+
+app.get("/allHoldings", async (req, res) => {
+  let allHoldings = await HoldingsModel.find({});
+  res.json(allHoldings);
+});
+
+app.get("/allPositions", async (req, res) => {
+  let allPositions = await PositionsModel.find({});
+  res.json(allPositions);
+});
+
+app.post("/newOrder", async (req, res) => {
+  let newOrder = new OrdersModel({
+    name: req.body.name,
+    qty: req.body.qty,
+    price: req.body.price,
+    mode: req.body.mode,
+  });
+
+  newOrder.save();
+
+  res.send("Order saved!");
+});
 
 app.listen(PORT, () => {
   console.log("App started!");

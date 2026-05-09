@@ -11,6 +11,8 @@ import Summary from "./Summary";
 import WatchList from "./WatchList";
 import { GeneralContextProvider } from "./GeneralContext";
 
+
+// The Dashboard component serves as the main container for the dashboard application. It includes a sidebar (WatchList) and a content area where different components are rendered based on the route. The GeneralContextProvider is used to provide context to the WatchList component.
 const Dashboard = () => {
   return (
     <div className="dashboard-container">

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import BuyActionWindow from "./BuyActionWindow";
 
+
+// The GeneralContext is a React context that provides functions to open and close a buy action window. The GeneralContextProvider component manages the state of whether the buy window is open and which stock is selected. It renders the BuyActionWindow component when the buy window is open, passing the selected stock's UID as a prop.
 const GeneralContext = React.createContext({
   openBuyWindow: (uid) => {},
   closeBuyWindow: () => {},
